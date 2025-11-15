@@ -63,6 +63,20 @@
         .btn-bkash {
             background: linear-gradient(45deg, #e91e63, #c2185b);
         }
+        .btn-order-now {
+            background: linear-gradient(45deg, #ef4444, #dc2626) !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+            padding: 12px 20px !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+        }
+        .btn-order-now:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4) !important;
+            background: linear-gradient(45deg, #dc2626, #b91c1c) !important;
+        }
         .loading {
             opacity: 0.7;
             pointer-events: none;
@@ -1097,8 +1111,8 @@
                                 </button>
                                 <button onclick="orderProduct('${product.id}')" 
                                         ${product.stock <= 0 ? 'disabled' : ''}
-                                        class="w-full btn-primary text-white py-2 px-4 rounded-lg font-semibold ${product.stock <= 0 ? 'opacity-50 cursor-not-allowed' : ''}">
-                                    ${product.stock > 0 ? 'এখনই অর্ডার' : 'স্টক নেই'}
+                                        class="w-full btn-order-now text-white py-3 px-6 rounded-lg font-semibold text-lg ${product.stock <= 0 ? 'opacity-50 cursor-not-allowed' : ''}">
+                                    ${product.stock > 0 ? 'এখনই অর্ডার করুন' : 'স্টক নেই'}
                                 </button>
                             </div>
                         </div>
@@ -2518,7 +2532,3 @@
     </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99e4121b8338bb2f',t:'MTc2MzA5Nzc0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
-
-
